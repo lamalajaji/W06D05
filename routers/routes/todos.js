@@ -3,10 +3,7 @@ const { addTask, displayTasks } = require("./../controller/todos");
 
 const todosRouter = express.Router();
 
-todosRouter.post("/todos", addTask);
-todosRouter.get("/todos", displayTasks);
+todosRouter.post("/", addTask);
+todosRouter.get("/", displayTasks);
 
-
-
-
-module.exports = todosRouter; 
+module.exports = todosRouter;

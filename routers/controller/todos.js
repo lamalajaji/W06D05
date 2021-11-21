@@ -1,17 +1,13 @@
 const someModel = require("./../../db/models/Schema");
 
-
-
-
-
 const addTask = (req, res) => {
   const { task } = req.body;
 
   const newTask = new someModel({
-    task
+    task,
   });
 
-  newSomeData
+  newTask
     .save()
     .then((result) => {
       res.json(result);
@@ -21,8 +17,7 @@ const addTask = (req, res) => {
     });
 };
 
-
-const displayTasks = (req, res) =>{
+const displayTasks = (req, res) => {
   someModel
     .find({})
     .then((result) => {
